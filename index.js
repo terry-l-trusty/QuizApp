@@ -60,7 +60,7 @@ function startQuiz (){
         console.log(counter)
         $('.presidents').show()
         $('button').text('Next Question')
-        $('h3').text(STORE[counter].question)
+        $('h3').text(STORE[0].question)
         $('.start').hide()
         $('.question').show()
         $('h5').text('Question:' + maxCounter + '/6')
@@ -71,6 +71,7 @@ function startQuiz (){
 function nextQuestion(){
     $('.question').click(function(){
         $('.presidents').show()
+        $('p').hide()
         if (answerCounter <= counter){
             alert('Please Answer')
         } else{
@@ -89,9 +90,6 @@ function nextQuestion(){
         }
 
         }
-        
-        
-        
        
     })
     
@@ -102,20 +100,23 @@ function correctAnswer(){
     $('img').click(function(){
         event.stopPropagation();
         let x = $(this).attr('src')
-
         if(x == STORE[counter].correctAnswer){
-            alert('Correct, the answer is ' + STORE[counter].presidentName)
+            $('p').text('Correct, the answer is ' + STORE[counter].presidentName)
+            $('p').show()
             rightAnswer +=1
             answerCounter+=1
             $('.presidents').hide()
         }else{
             wrongAnswer+=1
             answerCounter+=1
-            alert('No, thats not correct. The corect answer is ' + STORE[counter].presidentName)
+            $('p').text('No, thats not correct. The corect answer is ' + STORE[counter].presidentName)
             $('.presidents').hide()
+            $('p').show()
         }
-
-    })}
+        
+    })
+    
+}
 
  
 //add styling to the images upon hovering over them
