@@ -70,6 +70,7 @@ function startQuiz (){
 //function to display the next question after button has been clicked
 function nextQuestion(){
     $('.question').click(function(){
+        $('.presidents').show()
         if (answerCounter <= counter){
             alert('Please Answer')
         } else{
@@ -106,10 +107,12 @@ function correctAnswer(){
             alert('Correct, the answer is ' + STORE[counter].presidentName)
             rightAnswer +=1
             answerCounter+=1
+            $('.presidents').hide()
         }else{
             wrongAnswer+=1
             answerCounter+=1
             alert('No, thats not correct. The corect answer is ' + STORE[counter].presidentName)
+            $('.presidents').hide()
         }
 
     })}
