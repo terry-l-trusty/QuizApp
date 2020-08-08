@@ -1,0 +1,57 @@
+
+
+
+
+
+/*background color*/
+body {
+background-color:#add8e6;
+}
+
+/*Header styling*/
+h1{
+display: flex;
+justify-content: center;
+font-family: 'Noto Sans TC', sans-serif;
+color: #ffffC2;
+text-shadow: -1px 0px 0px rgba(150, 150, 150, 1);
+}
+
+/*Styling for the quiz box*/
+.quizBox {
+display: flex;
+height: 300px;
+margin-top: 50x;
+margin-bottom: 100px;
+margin-right: auto;
+margin-left: auto;
+align-items: center;;
+background-color: #ffffC2;
+font-family: 'Noto Sans TC', sans-serif;
+color: #58a0c3;
+width: 1000px;
+box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+border-radius: 20px 19px 10px 16px;
+border: 1px solid #000000;
+}
+
+
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: blue;
+    
+}
+
+
+/*styling for  images*/
+.presidents{
+    display: flex;
+    justify-content: center;
+    justify-content:space-between;
+}
+
