@@ -54,7 +54,7 @@ let generalCounter = 1//Counter to let us know when the user has finished the qu
 let wrongAnswer = 0//Counter to show how many the user has gotten wrong
 let answerCounter =  0
 //Function to start the quiz
-function startQuiz (){
+function render (){
     
     $('.start').click(function(){
         console.log(counter)
@@ -87,6 +87,16 @@ function nextQuestion(){
         $('h5').text('Question:' + maxCounter + '/6')
         if(generalCounter > 6){
             alert('You Scored ' + rightAnswer + '/6')
+            counter = 0//Counter to show the question from the database
+            maxCounter = 1//Counter to show the question number out of the total questions that the user is on 
+            rightAnswer = 0//Counter to show the questions that the user has gotten right 
+            generalCounter = 1//Counter to let us know when the user has finished the quiz 
+            wrongAnswer = 0//Counter to show how many the user has gotten wrong
+            answerCounter =  0
+            $('button').text('Next Question')
+            $('h3').text(STORE[0].question)
+            $('h5').text('Question:' + maxCounter + '/6')
+
         }
 
         }
@@ -134,7 +144,7 @@ function addStyling(){
 
 $(addStyling);
 $(hideImage);
-$(startQuiz);
+$(render);
 $(nextQuestion);
 $(correctAnswer);
 
