@@ -119,7 +119,7 @@ function correctAnswer(){
         }else{
             wrongAnswer+=1
             answerCounter+=1
-            $('p').text('No, thats not correct. The corect answer is ' + STORE[counter].presidentName)
+            $('p').text('No, thats not correct. The correct answer is ' + STORE[counter].presidentName)
             $('.presidents').hide()
             $('p').show()
         }
