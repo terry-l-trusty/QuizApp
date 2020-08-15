@@ -64,6 +64,7 @@ function render (){
         $('.start').hide()
         $('.question').show()
         $('h5').text('Question:' + maxCounter + '/6')
+        $('h5').show()
         })
     }
 
@@ -93,9 +94,13 @@ function nextQuestion(){
             generalCounter = 1//Counter to let us know when the user has finished the quiz 
             wrongAnswer = 0//Counter to show how many the user has gotten wrong
             answerCounter =  0
-            $('button').text('Next Question')
-            $('h3').text(STORE[0].question)
-            $('h5').text('Question:' + maxCounter + '/6')
+            $('.start').show()
+            $('.question').hide()
+            $('h3').text('How well do you know your history?')
+            $('h5').hide()
+            $('.presidents').hide()
+            $('.start').text('Start')
+
 
         }
 
